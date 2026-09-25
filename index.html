@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>مهمة حاتم — 23</title>
+
+  <link rel="stylesheet" href="Hatem.css">
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+  <!-- LOGIN -->
+  <section id="loginScreen" class="screen active">
+
+    <div class="card">
+
+      <div class="secret-icon">🔒</div>
+
+      <div class="small-title">
+        ملف سري للغاية
+      </div>
+
+      <h1>
+        مهمة حاتم
+      </h1>
+
+      <div class="age">
+        23
+      </div>
+
+      <p class="intro">
+        أهلاً يا حاتم...
+        <br>
+        قبل ما نفتح الملف، لازم نتأكد انه انت عشان الفضايح.
+      </p>
+
+      <p class="warning">
+        ⚠️ تحذير:
+        <br>
+        الملف يحتوي على ذكريات كان المفروض تفضل مدفونة.
+      </p>
+
+      <input
+        id="passwordInput"
+        type="password"
+        placeholder="اكتب كلمة السر"
+        autocomplete="off"
+      >
+
+      <button onclick="login()">
+        دخول 🔓
+      </button>
+
+      <p id="loginMessage" class="error"></p>
+
+    </div>
+
+  </section>
+
+
+  <!-- QUIZ -->
+  <section id="quizScreen" class="screen">
+
+    <div class="quiz-header">
+
+            <span id="questionNumber">
+                السؤال 1 من 9
+            </span>
+
+      <span id="score">
+                النقاط: 0
+            </span>
+
+    </div>
+
+    <div class="progress-container">
+
+      <div id="progressBar"></div>
+
+    </div>
+
+
+    <div class="card">
+
+      <div id="questionEmoji" class="question-emoji">
+        🏍️
+      </div>
+
+      <h2 id="questionText">
+        السؤال
+      </h2>
+
+      <div id="answersContainer" class="answers">
+
+      </div>
+
+      <div id="feedback" class="feedback">
+
+      </div>
+
+      <button
+        id="nextButton"
+        class="next-button hidden"
+        onclick="nextQuestion()"
+      >
+        السؤال التالي ➜
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- RESULT -->
+  <section id="resultScreen" class="screen">
+
+    <div class="card result-card">
+
+      <div class="big-icon">
+        🏆
+      </div>
+
+      <h1>
+        تم اجتياز الاختبار!
+      </h1>
+
+      <div id="finalScore"></div>
+
+      <p>
+        بعد 13 سنة صحوبية...
+        <br>
+        واضح إن الذاكرة لسه شغالة 😂
+      </p>
+
+      <button onclick="showGift()">
+        استلم جائزتك 🎁
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- GIFT -->
+  <section id="giftScreen" class="screen">
+
+    <div class="card result-card">
+
+      <div class="confetti">
+        🎉 🎂 🎉
+      </div>
+
+      <h1>
+        كل سنة وإنت طيب يا حاتم ❤️
+      </h1>
+
+      <p class="birthday-text">
+
+        13 سنة صحوبية...
+
+        <br><br>
+
+        ولسه عندنا مواقف أكتر بكتير من اللي دخلناها في الاختبار ده 😂
+
+        <br><br>
+
+        ربنا يديمك في حياتي يا صاحبي،
+        وإن شاء الله السنة الجاية نفتكر مواقف أكتر...
+
+        <br>
+
+        <strong>
+          بس ياريت من غير طين 😂
+        </strong>
+
+      </p>
+
+      <div
+  class="gift"
+  onclick="openGift()"
+  title="اضغط على الهدية"
+>
+  🎁
+</div>
+
+<p class="gift-hint">
+  دوس على الهدية 👀
+</p>
+
+<div id="memoryPhoto" class="memory-photo hidden">
+
+  <p class="photo-title">
+    ❤️ 13 سنة من الهبل
+  </p>
+
+  <img
+    src="image.JPEG"
+    alt="أحمد وحاتم"
+  >
+
+  <p class="photo-text">
+    ولسه الجاي أكتر يا صاحبي ❤️
+  </p>
+
+</div>
+  </section>
+
+</div>
+<audio id="backgroundMusic" loop preload="auto">
+  <source src="sound.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="goatSound" preload="auto">
+  <source src="goat.mp3" type="audio/mpeg">
+</audio>
+
+<script src="Hatem.js"></script>
+</body>
+</html>
